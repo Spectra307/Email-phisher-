@@ -17,7 +17,8 @@ interface AnalysisResultsType {
 }
 export default function Home() {
   const [emailContent, setEmailContent] = React.useState('');
-  const [analysisResults, setAnalysisResults] = React.useState(null);
+const [analysisResults, setAnalysisResults] = React.useState<AnalysisResultsType | null>(null);
+
   const [isAnalyzing, setIsAnalyzing] = React.useState(false);
 
   const handleAnalyzeEmail = async (content: string) => {
